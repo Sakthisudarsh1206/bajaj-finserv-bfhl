@@ -1,0 +1,279 @@
+{
+  "info": {
+    "_postman_id": "bfhl-api-collection",
+    "name": "Bajaj Finserv BFHL API",
+    "description": "Collection for testing the BFHL API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "BFHL - Example A",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": [\"a\", \"1\", \"334\", \"4\", \"R\", \"$\"]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test case A from the specification"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\"a\", \"1\", \"334\", \"4\", \"R\", \"$\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/bfhl",
+              "host": ["{{baseUrl}}"],
+              "path": ["bfhl"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"is_success\": true,\n  \"user_id\": \"sakthisudarsen_j_12062004\",\n  \"email\": \"SAKTHISUDHARSEN04@GMAIL.COM\",\n  \"roll_number\": \"22BAI1122\",\n  \"odd_numbers\": [\"1\"],\n  \"even_numbers\": [\"334\", \"4\"],\n  \"alphabets\": [\"A\", \"R\"],\n  \"special_characters\": [\"$\"],\n  \"sum\": \"339\",\n  \"concat_string\": \"Ra\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "BFHL - Example B",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": [\"2\", \"a\", \"y\", \"4\", \"&\", \"-\", \"*\", \"5\", \"92\", \"b\"]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test case B from the specification"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\"2\", \"a\", \"y\", \"4\", \"&\", \"-\", \"*\", \"5\", \"92\", \"b\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/bfhl",
+              "host": ["{{baseUrl}}"],
+              "path": ["bfhl"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"is_success\": true,\n  \"user_id\": \"sakthisudarsen_j_12062004\",\n  \"email\": \"SAKTHISUDHARSEN04@GMAIL.COM\",\n  \"roll_number\": \"22BAI1122\",\n  \"odd_numbers\": [\"5\"],\n  \"even_numbers\": [\"2\", \"4\", \"92\"],\n  \"alphabets\": [\"A\", \"Y\", \"B\"],\n  \"special_characters\": [\"&\", \"-\", \"*\"],\n  \"sum\": \"103\",\n  \"concat_string\": \"ByA\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "BFHL - Example C",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": [\"A\", \"ABcD\", \"DOE\"]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test case C from the specification"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\"A\", \"ABcD\", \"DOE\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/bfhl",
+              "host": ["{{baseUrl}}"],
+              "path": ["bfhl"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"is_success\": true,\n  \"user_id\": \"sakthisudarsen_j_12062004\",\n  \"email\": \"SAKTHISUDHARSEN04@GMAIL.COM\",\n  \"roll_number\": \"22BAI1122\",\n  \"odd_numbers\": [],\n  \"even_numbers\": [],\n  \"alphabets\": [\"A\", \"ABCD\", \"DOE\"],\n  \"special_characters\": [],\n  \"sum\": \"0\",\n  \"concat_string\": \"EoDdCbAa\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "BFHL - Invalid Payload",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"invalid\": \"payload\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test invalid payload handling"
+      },
+      "response": [
+        {
+          "name": "Error Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"invalid\": \"payload\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/bfhl",
+              "host": ["{{baseUrl}}"],
+              "path": ["bfhl"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"is_success\": false,\n  \"message\": \"Invalid input: data must be an array\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "BFHL - Method Not Allowed",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test non-POST method handling"
+      },
+      "response": [
+        {
+          "name": "Method Not Allowed",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/bfhl",
+              "host": ["{{baseUrl}}"],
+              "path": ["bfhl"]
+            }
+          },
+          "status": "Method Not Allowed",
+          "code": 405,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"error\": \"Method not allowed\",\n  \"message\": \"Only POST requests are supported\"\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://your-app.vercel.app",
+      "description": "Base URL for the deployed API"
+    }
+  ]
+}
