@@ -76,8 +76,8 @@ describe('BFHL API', () => {
       expect(res.getStatus()).toBe(204);
     });
 
-    it('should return 405 for non-POST requests', async () => {
-      const req = mockRequest('GET');
+    it('should return 405 for non-POST/GET requests', async () => {
+      const req = mockRequest('DELETE');
       const res = mockResponse();
 
       await handler(req, res);
@@ -85,7 +85,19 @@ describe('BFHL API', () => {
       expect(res.getStatus()).toBe(405);
       expect(res.getBody()).toEqual({
         error: 'Method not allowed',
-        message: 'Only POST requests are supported',
+        message: 'Only POST and GET requests are supported',
+      });
+    });
+
+    it('should handle GET request and return operation_code', async () => {
+      const req = mockRequest('GET');
+      const res = mockResponse();
+
+      await handler(req, res);
+
+      expect(res.getStatus()).toBe(200);
+      expect(res.getBody()).toEqual({
+        operation_code: 1,
       });
     });
   });
