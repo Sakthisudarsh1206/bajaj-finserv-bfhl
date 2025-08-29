@@ -79,7 +79,7 @@ A production-ready implementation of the Bajaj Finserv / VIT BFHL specification,
 
 2. **Your API will be available at**:
    ```
-   https://<your-project>.vercel.app/bfhl
+   https://bajaj-finserv-gwss6rlyz-sakthisudharsen04-gmailcoms-projects.vercel.app/
    ```
 
 ## 🧪 Testing
@@ -261,13 +261,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 5. Ensure all tests pass
 6. Submit a pull request
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/sakthisudarsen/bajaj-finserv-bfhl/issues)
-- **Email**: SAKTHISUDHARSEN04@GMAIL.COM
-
 ---
 
-**Submission URL Format**: `https://<your-project>.vercel.app/bfhl`
+**Submission URL Format**: `https://bajaj-finserv-gwss6rlyz-sakthisudharsen04-gmailcoms-projects.vercel.app/`
 
 Made with ❤️ by [sakthisudarsen j](https://github.com/sakthisudarsen)
