@@ -10,7 +10,7 @@ const isLetters = s => typeof s === 'string' && /^[A-Za-z]+$/.test(s);
 // CORS headers
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
   'Content-Type': 'application/json',
 };
@@ -21,26 +21,18 @@ export default function handler(req, res) {
     res
       .status(204)
       .setHeader('Access-Control-Allow-Origin', '*')
-      .setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+      .setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
       .setHeader('Access-Control-Allow-Headers', 'Content-Type')
       .end();
     return;
   }
 
-  // Handle GET request - return operation_code
-  if (req.method === 'GET') {
-    Object.keys(corsHeaders).forEach(key => res.setHeader(key, corsHeaders[key]));
-    return res.status(200).json({
-      operation_code: 1,
-    });
-  }
-
-  // Only allow POST and GET
+  // Only allow POST as specified in question paper
   if (req.method !== 'POST') {
     Object.keys(corsHeaders).forEach(key => res.setHeader(key, corsHeaders[key]));
     return res.status(405).json({
       error: 'Method not allowed',
-      message: 'Only POST and GET requests are supported',
+      message: 'Only POST requests are supported',
     });
   }
 
