@@ -1,5 +1,10 @@
 {
   "version": 2,
+  "functions": {
+    "api/bfhl.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/bfhl",
@@ -16,7 +21,7 @@
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "POST, OPTIONS"
+          "value": "POST, GET, OPTIONS"
         },
         {
           "key": "Access-Control-Allow-Headers",
